@@ -35,7 +35,7 @@ img {
 
 /* Logo */
 
-.nav,
+.nav .container,
 .nav-logo {
   display: flex;
 }
@@ -449,6 +449,10 @@ img {
   letter-spacing: 0.02em;
 }
 
+.footer-right .social-list .item + .item {
+  margin-left: 16px;
+}
+
 .footer-right .social-link {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -487,7 +491,6 @@ img {
 .subscribe-field input {
   width: 264px;
   height: 40px;
-  margin-right: 24px;
   padding: 8px 16px;
   background-color: var(--secondary-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -503,8 +506,9 @@ img {
 }
 
 .btn-subscribe {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  margin-left: 24px;
   min-width: 165px;
   border-radius: 4px;
   padding: 8px 24px;
@@ -674,6 +678,7 @@ img {
 
 .modal {
   position: absolute;
+  padding: 72px 24px 24px 24px;
   width: 408px;
   top: 50%;
   left: 50%;
@@ -685,10 +690,11 @@ img {
 }
 
 .btn-modal {
+  position: absolute;
   display: block;
+  top: 24px;
+  right: 24px;
   margin-left: auto;
-  margin-top: 24px;
-  margin-right: 24px;
   padding: 8px;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -719,10 +725,6 @@ img {
 .btn-modal:hover .close,
 .btn-modal:focus .close {
   fill: #ffffff;
-}
-
-.application {
-  padding: 24px;
 }
 
 .application .title {
@@ -760,6 +762,12 @@ img {
   padding: 8px 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .form-icon {
@@ -769,6 +777,8 @@ img {
   width: 13px;
   height: 13px;
   fill: var(--secondary-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field input:focus ~ .form-icon {
@@ -781,6 +791,12 @@ img {
   height: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field textarea:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .form-field textarea::placeholder {
@@ -790,13 +806,6 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field input:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.form-field textarea:focus {
-  border: 1px solid var(--accent-color);
-}
 .form-checkbox {
   display: flex;
   justify-content: center;
